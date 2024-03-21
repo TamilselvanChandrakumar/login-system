@@ -31,4 +31,6 @@ router.get("/dashboard", (req, res) => {
   }
 });
 
+// route for logout
+
 module.exports = router;
