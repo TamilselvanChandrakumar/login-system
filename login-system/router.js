@@ -33,4 +33,15 @@ router.get("/dashboard", (req, res) => {
 
 // route for logout
 
+router.get("/logout", (req, res) => {
+  req.session.destroy((err) => {
+    if (err) {
+      console.log(err);
+      res.send("error");
+    } else {
+      res.render("base", { logout: "logout successfully" });
+    }
+  });
+});
+
 module.exports = router;
