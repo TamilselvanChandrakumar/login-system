@@ -29,6 +29,7 @@ app.get("/", (req, res) => {
   res.render("base", { title: "login system" });
 });
 
+// start a server.
 app.listen(port, () => {
   console.log("server started on port", port);
 });
