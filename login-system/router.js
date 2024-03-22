@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 const credential = {
-  email: "tamil@gmail.com",
+  email: "yourmail@gmail.com",
   password: 123,
 };
 
@@ -15,7 +15,6 @@ router.post("/login", (req, res) => {
   ) {
     req.session.user = req.body.email;
     res.redirect("/route/dashboard");
-    // res.end("loggin successfull");
   } else {
     res.end("invalid username");
   }

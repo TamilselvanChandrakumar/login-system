@@ -1,8 +1,10 @@
 <%-include("header")-%>
-<div>
-  <h1>welcome to express dashborad</h1>
-  <h3><%= locals.user ? user : "User" %></h3>
-  <a href="/route/logout">logout</a>
+<div class="dashborad-container">
+  <div class="dashborad-inner">
+    <h1>welcome to express dashborad</h1>
+    <h3><%= locals.user ? user : "User" %></h3>
+    <a href="/route/logout">logout</a>
+  </div>
 </div>
 
 <%-include("footer")-%>

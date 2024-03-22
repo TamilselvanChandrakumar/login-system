@@ -4,10 +4,10 @@
   <div class="login-inner">
     <div class="login-title">
       <h2>login system</h2>
-      <span>login for the existing user</span>
       <%if(locals.logout){%>
-      <div><%=logout%></div>
+      <div class="logout-message"><%=logout%></div>
       <%}%>
+      <span>login for the existing user</span>
     </div>
     <form action="/route/login" method="POST">
       <div>
