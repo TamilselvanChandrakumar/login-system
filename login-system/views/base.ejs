@@ -1,24 +1,26 @@
 <%-include("header")-%>
 
 <div class="login-container">
-  <div>
-    <h2>login system</h2>
-    <span>login for the existing user</span>
-    <%if(locals.logout){%>
-    <div><%=logout%></div>
-    <%}%>
+  <div class="login-inner">
+    <div class="login-title">
+      <h2>login system</h2>
+      <span>login for the existing user</span>
+      <%if(locals.logout){%>
+      <div><%=logout%></div>
+      <%}%>
+    </div>
+    <form action="/route/login" method="POST">
+      <div>
+        <input type="email" placeholder="enter email" name="email" />
+        <br />
+        <span>Register email address</span>
+      </div>
+      <div>
+        <input type="password" placeholder="enter password" name="password" />
+      </div>
+      <button type="submit">Submit</button>
+    </form>
   </div>
-  <form action="/route/login" method="POST">
-    <div>
-      <input type="email" placeholder="enter email" name="email" />
-      <br />
-      <span>Register email address</span>
-    </div>
-    <div>
-      <input type="password" placeholder="enter password" name="password" />
-    </div>
-    <button type="submit">Submit</button>
-  </form>
 </div>
 
 <%-include("footer")-%>
